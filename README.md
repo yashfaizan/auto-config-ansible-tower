@@ -4,7 +4,9 @@ This project auto configures the organization, custom credentials, inventories, 
 
 All the configurations required for this project should be stored in a **JSON** files.
 
-The project creates a new organization and all the configurations/tasks mentioned in the **JSON** file would be a part of newly created organization. If you already have a organization created, then you need to pass an extra variable **skip_organization_creation: yes** inside the extra vars section of the template. If any of the configuration already exists then the playbook deletes the existing configuration and will create a new one according to the  data in **JSON** file.
+The project creates a new organization and all the configurations/tasks mentioned in the **JSON** file would be a part of newly created organization. If you already have a organization created, then you need to pass an extra variable **skip_organization_creation: yes** inside the extra vars section of the template.
+
+If any of the configuration already exists then the playbook deletes the existing configuration and will create a new one according to the  data in **JSON** file.
 
 
 
