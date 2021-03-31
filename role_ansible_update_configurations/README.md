@@ -33,7 +33,6 @@ Including an example of how to use your role (for instance, with variables passe
         tower_gui_password: "password"
         category: "credentials"
         task_name: "serverbuild-release-credentials-windows"
-        
 
 Testing Platform
 ----------------

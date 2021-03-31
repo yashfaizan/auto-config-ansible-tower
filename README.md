@@ -40,7 +40,7 @@ Create an inventory and in the hosts section add **localhost** as the hostname.
 
 ### Credentials Setup
 
-##### Machine Credentials
+#### Machine Credentials
 
 ```bash
 This credential is used by the playbook to connect to localhost.
@@ -55,7 +55,7 @@ This credential is used by the playbook to connect to localhost.
 
 ![ Machine Credentials Setup ](images/Setup-Machine-Credentials.JPG)
 
-##### SCM Credentials
+#### SCM Credentials
 
 ```bash
 This credentials are used with Projects to clone and update local source code repositories from a remote revision control system such as GitHub, Bitbucket, GitLab or Subversion.
@@ -70,7 +70,7 @@ This credentials are used with Projects to clone and update local source code re
 
 ![ SCM Credentials Setup ](images/Setup-SCM-Credentials.JPG)
 
-##### Vault Credentials
+#### Vault Credentials
 
 ```bash
 Since passwords are encrypted using ansible vault, vault credential is required in order to decrypt those passwords.
@@ -86,7 +86,7 @@ Since passwords are encrypted using ansible vault, vault credential is required 
 ![ Vault Setup ](images/Setup-Vault.JPG)
 
 
-### Project Setup
+#### Project Setup
 
 ```bash
 Projects are a logical collection of playbooks in ansible tower. We have to configure and sync the project.
@@ -97,13 +97,13 @@ Below is an example table.
 | -------------------------------- | --------------------------------- | ------------------------------ |
 |             Name                 |       Name of the Project     |    Tower-Auto-Config         |
 |         SCM Type          |       Type of Source Control being used         |        Git         |
-|            SCM URL             |       URL of the repository  |     https://github.com/yashfaizan/tower-auto-config.git           |
+|            SCM URL             |       URL of the repository  |     http(s)://github.com/xyz.git          |
 |            SCM branch              |      Name of the branch  |         master           |
 |            SCM Credential              |      Credential used to authenticate the repository  |         scm-test-creds        |
 
 ![ Project Setup](images/Setup-Projects.JPG)
 
-### Job Templates Setup
+#### Job Templates Setup
 
 ```bash
 Job Templates are combination of an Ansible playbook and the set of parameters required to execute a particular task on the target server.
@@ -138,7 +138,7 @@ delete_projects_if_exists: yes
 
 ![Template Extra Vars](images/Setup-Template-extra-vars.JPG)
 
-### Tower Environment Variables Setup
+#### Tower Environment Variables Setup
 
 ```bash
 Below variables needs to be set in the Ansible/AWX Tower
@@ -173,11 +173,11 @@ For reference the project contains example files on how the json data should loo
 
 This configuration files are should be stored in a seperate repository and the repo url should be mentioned in the json file.Take a look at [config_ansible_tower_vars_example.json](https://github.com/yashfaizan/ansible-tower-auto-configuration-files.git) and [passwords_file_vault_example.json](https://github.com/yashfaizan/ansible-tower-auto-configuration-files.git)
 
-# Run
+## Run
 
 Once all the setup is completed , trigger the job template to auto configure the ansible tower with the configurations stored in **JSON** file.
 
-# Roles
+## Roles
 
 This repository makes use of roles for executing appropriate tasks.Click on appropriate role name for detailed description.
 
