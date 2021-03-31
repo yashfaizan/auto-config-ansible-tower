@@ -13,7 +13,7 @@ jobs:
       - name: "Checkout the branch"
         uses: actions/checkout@v2
         with:
-          full-depth: 1
+          full-depth: 0
           
       - name: "Run super linter"
         uses: github/super-linter@v3
