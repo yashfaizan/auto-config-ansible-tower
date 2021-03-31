@@ -13,7 +13,7 @@ NA
 Dependencies
 ------------
 
-- master json file
+- NA
 
 Example Playbook
 ----------------

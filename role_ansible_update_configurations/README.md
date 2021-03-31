@@ -1,9 +1,9 @@
 Role Name
 =========
 
-- role_ansible_pre_check
+- role_ansible_update_configurations
 
-      This role pre checks for configurations like organization,credentials, custom-credentials, teplates,projects and workflows
+      This role updates the configurations/components such as inventories, hosts, credentials, templates, workflows, projects etc in ansible tower.
 
 Role Variables
 --------------

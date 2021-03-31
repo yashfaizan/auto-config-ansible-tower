@@ -35,7 +35,6 @@ Including an example of how to use your role (for instance, with variables passe
         category: "credentials"
         task_name: "serverbuild-release-credentials-windows"
         task_id: 171
-        
 
 Testing Platform
 ----------------

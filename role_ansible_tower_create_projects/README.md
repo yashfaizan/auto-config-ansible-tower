@@ -1,9 +1,9 @@
 Role Name
 =========
 
-- role_ansible_tower_create_inventory
+- role_ansible_tower_create_projects
 
-      This role creates inventory based on data defined in the inventory section of master json file.
+      This role creates projects based on data defined in the inventory section of master json file.
 
 Role Variables
 --------------
@@ -13,7 +13,7 @@ NA
 Dependencies
 ------------
 
-- master json file
+- NA
 
 Example Playbook
 ----------------
@@ -22,7 +22,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - role_ansible_tower_create_inventory
+         - role_ansible_tower_create_projects
 
 Testing Platform
 ----------------
