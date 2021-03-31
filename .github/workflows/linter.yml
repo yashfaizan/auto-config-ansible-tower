@@ -1,0 +1,22 @@
+name: "Ansible Code Lint"
+on:
+  push:
+    branches: [ develop ]
+    branches-ignore: [ main ]
+    
+jobs:
+  build:
+    name: "Check Code Quality"
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: "Checkout the branch"
+        uses: actions/checkout@v2
+        with:
+          full-depth: 1
+          
+      - name: "Run super linter"
+        uses: github/super-linter@v3
+        env:
+          DEFAULT_BRANCH: master
+          VALIDATE_ALL_CODEBASE: false  ## set to true if you want to scan the entire files for every push if false it scans only the updated files
