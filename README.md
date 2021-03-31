@@ -23,11 +23,11 @@ The below configurations should be setup in the ansible tower for the project up
 3. Project
 4. Template
 
-```
+```bash
 For Prod environment we would highly recommend to encrypt the passwords file using ansible vault.
 ```
 
-```
+```bash
 For Test Environment you can make use of the passwords example file. In this case you can skip the vault credential setup.
 ```
 
@@ -42,7 +42,7 @@ Create an inventory and in the hosts section add **localhost** as the hostname.
 
 ##### Machine Credentials
 
-```
+```bash
 This credential is used by the playbook to connect to localhost.
 ```
 
@@ -57,7 +57,7 @@ This credential is used by the playbook to connect to localhost.
 
 ##### SCM Credentials
 
-```
+```bash
 This credentials are used with Projects to clone and update local source code repositories from a remote revision control system such as GitHub, Bitbucket, GitLab or Subversion.
 ```
 
@@ -72,10 +72,11 @@ This credentials are used with Projects to clone and update local source code re
 
 ##### Vault Credentials
 
-```
+```bash
 Since passwords are encrypted using ansible vault, vault credential is required in order to decrypt those passwords.
 
 ```
+
 |             Field                |           Description             |            value               |
 | -------------------------------- | --------------------------------- | ------------------------------ |
 |             Name                 |       Name of the credentials     |    BBC-Vault-Creds         |
@@ -87,7 +88,7 @@ Since passwords are encrypted using ansible vault, vault credential is required 
 
 ### Project Setup
 
-```
+```bash
 Projects are a logical collection of playbooks in ansible tower. We have to configure and sync the project.
 Below is an example table.
 ```
@@ -104,10 +105,11 @@ Below is an example table.
 
 ### Job Templates Setup
 
-```
+```bash
 Job Templates are combination of an Ansible playbook and the set of parameters required to execute a particular task on the target server.
 Below table gives an example of job template configuration details
 ```
+
 |             Field                |           Description             |            value               |
 | -------------------------------- | --------------------------------- | ------------------------------ |
 |             Name                 |       Name of the Template     |    Tower-Auto-Config-Template        |
@@ -122,7 +124,7 @@ Below table gives an example of job template configuration details
 
 Fill the extra vars section of the template with the below value
 
-```
+```bash
 skip_organization_creation: no
 delete_organization_if_exists: yes
 delete_custom_credentials_if_exists: yes
@@ -138,7 +140,7 @@ delete_projects_if_exists: yes
 
 ### Tower Environment Variables Setup
 
-```
+```bash
 Below variables needs to be set in the Ansible/AWX Tower
 1. tower_env: release/national (or any other environment the tower is set up)
 2. tower_gui_url: http(s)://10.0.0.1 (tower url)
@@ -151,17 +153,17 @@ This variable can be set by logging into tower-->settings-->jobs-->extra environ
 ### Naming Conventions of **JSON** files
 
 This project depends on 2 **JSON** files
+
 - config_ansible_tower_vars_['tower environment'].json
 - passwords_file_vault_['tower environment'].json
 
-
 If the tower environment is **test** then the naming convention of both the files should be
+
 - config_ansible_tower_vars_test.json
 - passwords_file_vault_test.json
 
-
-
 If the tower environment is **dev** then the naming convention of both the files should be
+
 - config_ansible_tower_vars_dev.json
 - passwords_file_vault_dev.json
 
