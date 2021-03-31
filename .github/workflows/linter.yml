@@ -2,7 +2,7 @@ name: "Ansible Code Lint"
 on:
   push:
     branches: [ develop ]
-    branches-ignore: [ main ]
+#    branches-ignore: [ main ]
     
 jobs:
   build:
